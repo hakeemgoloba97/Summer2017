@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% extends "mainApp/base.html" %}
+  {% block body_block %}
+  <div class="container">
+  <div class="row">
+  <div class="col-lg-4 col-xs-4"><img id = "prev" class = "img-thumbnail" src="http://www.ehypermart.in/0/images/frontend/image-not-found.png" alt=""></div>
+  <div class="col-lg-4 col-xs-4"><img id = "curr" class = "img-thumbnail" src="http://www.ehypermart.in/0/images/frontend/image-not-found.png" alt=""></div>
+  <div class="col-lg-4 col-xs-4"><img id = "next" class = "img-thumbnail" src="http://www.ehypermart.in/0/images/frontend/image-not-found.png" alt=""></div>
+  </div>
+  <h3></h3>
+  <hr>
+
+  <div class="row">
+    <div class="col-lg-4 col-xs-4"><button id = "back">Back</button></div>
+    <div class="col-lg-4 col-xs-4"><button id = "rate">Rate!</button></div>
+    <div class="col-lg-4 col-xs-4"><button id = "skip">Skip</button></div>
+
+  </div>
+</div>
+
+    {% endblock %}
