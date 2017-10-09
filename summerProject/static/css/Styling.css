@@ -66,6 +66,7 @@ button:hover{
   background-color: green;
 }
 
+
 .jumbotron{
   margin-right: 0;
   margin-bottom: 0;
@@ -82,6 +83,18 @@ button:hover{
 form {
 margin: 0 auto;
 width:250px;
+}
+
+.stars label{
+  display: inline-block;
+  text-align: center;
+  margin: 0 0.2em;
+
+}
+
+.stars label input[type="radio"]{
+  display: block;
+  margin: 0 0.5em auto;
 }
 
 body{

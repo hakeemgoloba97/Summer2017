@@ -7,3 +7,10 @@ class userInfo(models.Model):
 
     def __str__(self):
         return self.user.username
+
+class userRatings(models.Model):
+
+    movie_id = models.IntegerField()
+    title = models.CharField(max_length=200)
+    user_id = models.IntegerField()
+    rating = models.IntegerField()

@@ -10,5 +10,5 @@ urlpatterns = [
     url(r'^signup/$',views.signup,name='signup'),
     url(r'^login/$',views.user_login,name='user_login'),
     url(r'^login/$',views.movieRate,name='movieRate'),
-
+    url(r'^recommendor/$',views.recommendor,name='recommendor'),
 ]

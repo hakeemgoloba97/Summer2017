@@ -22,5 +22,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^mainApp/',include('mainApp.urls')),
     url(r'^logout/',views.user_logout,name='logout'),
-    url(r'^movieRate/',views.movieRate,name='movieRate')
+    url(r'^movieRate/',views.movieRate,name='movieRate'),
+    url(r'^recommendor/$',views.recommendor,name='recommendor')
+
 ]

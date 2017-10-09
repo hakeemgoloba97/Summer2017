@@ -1,21 +1,37 @@
 <!DOCTYPE html>
 {% extends "mainApp/base.html" %}
+{% load staticfiles %}
   {% block body_block %}
   <div class="container">
   <div class="row">
   <div class="col-lg-4 col-xs-4"><img id = "prev" class = "img-thumbnail" src="http://www.ehypermart.in/0/images/frontend/image-not-found.png" alt=""></div>
   <div class="col-lg-4 col-xs-4"><img id = "curr" class = "img-thumbnail" src="http://www.ehypermart.in/0/images/frontend/image-not-found.png" alt=""></div>
   <div class="col-lg-4 col-xs-4"><img id = "next" class = "img-thumbnail" src="http://www.ehypermart.in/0/images/frontend/image-not-found.png" alt=""></div>
-  </div>
+
   <h3></h3>
+
+  <div class="col-lg-4 col-xs-4"><button id = "back">Back</button></div>
+  <div class="col-lg-4 col-xs-4"><button id = "rate">Rate!</button></div>
+  <div class="col-lg-4 col-xs-4"><button id = "skip">Skip</button></div>
+
+  <form  id = "form" class="stars" action="{% url 'mainApp:recommendor' %}" method="post">
+  {% csrf_token %}
+
+  <label for="rating1">1<input type="radio" name="rating" id = "rating1" value="1"></label>
+  <label for="rating2">2<input type="radio" name="rating" id = "rating2" value="2"></label>
+  <label for="rating3">3<input type="radio" name="rating" id = "rating3" value="3"></label>
+  <label for="rating4">4<input type="radio" name="rating" id = "rating4" value="4"></label>
+  <label for="rating5">5<input type="radio" name="rating" id = "rating5" value="5"></label>
+
+  <p></p>
   <hr>
 
-  <div class="row">
-    <div class="col-lg-4 col-xs-4"><button id = "back">Back</button></div>
-    <div class="col-lg-4 col-xs-4"><button id = "rate">Rate!</button></div>
-    <div class="col-lg-4 col-xs-4"><button id = "skip">Skip</button></div>
+  <input class = "submitBtn" type="submit" name="Submit" value="Submit" onclick="return lol();">
 
-  </div>
+  </form>
 </div>
 
-    {% endblock %}
+</div>
+
+{% endblock %}
+<script src="{% static 'js/stars.js' %}"></script>

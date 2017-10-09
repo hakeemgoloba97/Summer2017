@@ -1,4 +1,4 @@
-from mainApp.models import userInfo
+from mainApp.models import userInfo,userRatings
 from django import forms
 from django.contrib.auth.models import User
 
@@ -49,3 +49,6 @@ class userInfoForm(forms.ModelForm):
             'username': None,
             'email': None,
         }
+
+# class userRatingsForm(forms.ModelForm):
+#
